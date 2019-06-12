@@ -4,7 +4,7 @@ Enhancement:
 * add ```lib``` directory
 * code changes:
  ```javscript
-  - import {MKSwitch} from 'react-native-material-kit'```
+  - import {MKSwitch} from 'react-native-material-kit'
   + import {Switch as MKSwitch} from 'react-native-material-kit'
 ```
   * after build, lib/index.js export ```Button, ButtonStyles, ColorRaisedButton, RaisedButton, AccentRaisedButton, FlatButton, Fab, ColoredFab, AccentFab, Checkbox, IconToggle, RadioButton, RadioButtonGroup, Ripple, Switch```
