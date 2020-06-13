@@ -1,5 +1,5 @@
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import {
   Animated,
@@ -65,7 +65,7 @@ export class Thumb extends Component<ThumbProps, ThumbState> {
 
   componentWillReceiveProps(nextProps: ThumbProps) {
     if (nextProps.checked !== this.state.checked) {
-      this.setState({checked: nextProps.checked});
+      this.setState({ checked: nextProps.checked });
     }
   }
 
@@ -82,7 +82,7 @@ export class Thumb extends Component<ThumbProps, ThumbState> {
   // When a toggle action (from the given state) is confirmed.
   // - {`boolean`} `fromState` the previous state
   confirmToggle(fromState: boolean) {
-    this.setState({checked: !fromState});
+    this.setState({ checked: !fromState });
   }
 
   // Start the ripple effect
@@ -153,7 +153,7 @@ export class Thumb extends Component<ThumbProps, ThumbState> {
           style={[
             Thumb.defaultProps.style,
             this.props.thumbStyle,
-            {backgroundColor: this.state.checked ? this.props.onColor : this.props.offColor},
+            { backgroundColor: this.state.checked ? this.props.onColor : this.props.offColor },
           ]}
         />
         <Animated.View // the ripple layer

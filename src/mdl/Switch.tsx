@@ -10,7 +10,7 @@
 // Created by ywu on 15/7/28.
 //
 
-import React, {Component, createRef} from 'react';
+import React, { Component, createRef } from 'react';
 
 import {
   Animated,
@@ -20,10 +20,10 @@ import {
   View,
 } from 'react-native';
 
-import {getTheme, Theme} from '../theme';
-import {CheckedListener} from "../types";
+import { getTheme, Theme } from '../theme';
+import { CheckedListener } from "../types";
 import * as utils from '../utils';
-import AnimatedThumb, {Thumb} from './SwitchThumb';
+import AnimatedThumb, { Thumb } from './SwitchThumb';
 
 
 const defaultThumbRadius = 14;
@@ -129,7 +129,7 @@ export default class Switch extends Component<SwitchProps, SwitchState> {
       onLongPress: this.props.onLongPress,
     };
 
-    const mergedStyle = Object.assign({}, this.theme.switchStyle, utils.compact( {
+    const mergedStyle = Object.assign({}, this.theme.switchStyle, utils.compact({
       offColor: this.props.offColor,
       onColor: this.props.onColor,
       rippleColor: this.props.rippleColor,
@@ -219,9 +219,9 @@ export default class Switch extends Component<SwitchProps, SwitchState> {
 
   // Layout the thumb according to the size of the track
   private layoutThumb(checked: boolean | undefined,
-                      thumbRadius: number | undefined,
-                      trackLength: number | undefined,
-                      trackSize: number | undefined
+    thumbRadius: number | undefined,
+    trackLength: number | undefined,
+    trackSize: number | undefined
   ): any {
     trackSize = trackSize || defaultTrackSize;
     trackLength = trackLength || defaultTrackLength;
@@ -290,12 +290,12 @@ export default class Switch extends Component<SwitchProps, SwitchState> {
   // When a toggle action is confirmed.
   private confirmToggle() {
     const prevState = this.state.checked;
-    this.setState({checked: !prevState}, () => {
+    this.setState({ checked: !prevState }, () => {
       this.thumb && this.thumb.confirmToggle(prevState);
       this.translateThumb();
 
       if (this.props.onCheckedChange) {
-        this.props.onCheckedChange({checked: this.state.checked});
+        this.props.onCheckedChange({ checked: this.state.checked });
       }
     });
   }
