@@ -193,7 +193,7 @@ export default class Switch extends Component<SwitchProps, SwitchState> {
   // in order to access the component functions defined in `Thumb`
   private get thumb(): Thumb | null {
     const animatedThumb = this.thumbRef.current as any;
-    return animatedThumb && animatedThumb.getNode() as Thumb;
+    return animatedThumb as Thumb;
   }
 
   private getBgColor(theme: Theme): string {
@@ -265,6 +265,7 @@ export default class Switch extends Component<SwitchProps, SwitchState> {
     Animated.timing(this.animatedThumbLeft, {
       duration: this.props.thumbAniDuration || 300,
       toValue: newX,
+      useNativeDriver: false
     }).start(() => {
       this.state.thumbFrame.x = newX;
     });
