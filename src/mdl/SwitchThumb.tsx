@@ -92,10 +92,12 @@ export class Thumb extends Component<ThumbProps, ThumbState> {
       Animated.timing(this.animatedRippleAlpha, {
         duration: this.props.rippleAniDuration,
         toValue: 1,
+        useNativeDriver: false
       }),
       Animated.timing(this.animatedRippleScale, {
         duration: this.props.rippleAniDuration,
         toValue: 1,
+        useNativeDriver: false
       }),
     ]);
 
@@ -116,10 +118,12 @@ export class Thumb extends Component<ThumbProps, ThumbState> {
         Animated.timing(this.animatedRippleScale, {
           duration: this.props.rippleAniDuration || 250,
           toValue: 0,
+          useNativeDriver: false
         }),
         Animated.timing(this.animatedRippleAlpha, {
           duration: this.props.rippleAniDuration || 250,
           toValue: 0,
+          useNativeDriver: false
         }),
       ]).start();
 
