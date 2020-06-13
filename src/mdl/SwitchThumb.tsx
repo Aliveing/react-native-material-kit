@@ -63,7 +63,7 @@ export class Thumb extends Component<ThumbProps, ThumbState> {
   //   this.setState({checked: this.props.checked});
   // }
 
-  componentWillReceiveProps(nextProps: ThumbProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: ThumbProps) {
     if (nextProps.checked !== this.state.checked) {
       this.setState({ checked: nextProps.checked });
     }
