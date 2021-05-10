@@ -78,7 +78,7 @@ class Thumb extends Component {
     this._animatedLeft.addListener(this._getOnSliding());
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this._onRadiiUpdate(nextProps);
   }
 

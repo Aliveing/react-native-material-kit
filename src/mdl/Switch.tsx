@@ -116,7 +116,7 @@ export default class Switch extends Component<SwitchProps, SwitchState> {
     this.initLayout(this.props);
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps: SwitchProps) {
+  UNSAFE_UNSAFE_componentWillReceiveProps(nextProps: SwitchProps) {
     this.initLayout(nextProps);
   }
 

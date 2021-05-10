@@ -134,7 +134,7 @@ class Slider extends Component {
     this._internalSetValue(this.props.value, false);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this._onThumbRadiiUpdate(nextProps);
     this._internalSetValue(nextProps.value, false);
     this._aniUpdateValue(nextProps.value);

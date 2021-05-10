@@ -74,7 +74,7 @@ class Progress extends Component {
     this.buffer = this.props.buffer;
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.progress = nextProps.progress;
     this.buffer = nextProps.buffer;
   }

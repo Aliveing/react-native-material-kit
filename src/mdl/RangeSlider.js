@@ -51,7 +51,7 @@ class RangeSlider extends Component {
     this._onThumbRadiiUpdate(this.props);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this._onThumbRadiiUpdate(nextProps);
     this._setRange({ min: nextProps.minValue, max: nextProps.maxValue });
     this._updateValue(this._range);

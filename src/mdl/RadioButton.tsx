@@ -98,7 +98,7 @@ export default class RadioButton extends Component<RadioButtonProps, RadioButton
     this.group && this.group.add(this);
   }
 
-  componentWillReceiveProps(nextProps: RadioButtonProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: RadioButtonProps) {
     if (this.group !== nextProps.group) {
       this.group && this.group.remove(this);
       this.group = nextProps.group;

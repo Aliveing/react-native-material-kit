@@ -52,7 +52,7 @@ class FloatingLabel extends Component {
     this.updateText(this.props.text);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.updateText(nextProps.text);
   }
 
@@ -363,7 +363,7 @@ class Textfield extends Component {
     this._originPlaceholder = this.props.placeholder;
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const newText = nextProps.value || nextProps.text || nextProps.defaultValue;
     if (newText) {
       this.bufferedValue = newText;

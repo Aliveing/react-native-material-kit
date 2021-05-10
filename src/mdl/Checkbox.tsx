@@ -95,7 +95,7 @@ export default class Checkbox extends Component<CheckboxProps, CheckboxState> {
     this.initView(this.props.checked);
   }
 
-  // componentWillReceiveProps(nextProps: CheckboxProps) {
+  // UNSAFE_componentWillReceiveProps(nextProps: CheckboxProps) {
   //   if (nextProps.checked !== this.props.checked) {
   //     this.initView(nextProps.checked);
   //   }

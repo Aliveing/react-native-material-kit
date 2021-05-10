@@ -81,7 +81,7 @@ export default class IconToggle extends Component<IconToggleProps, IconToggleSta
     this.setState({checked: this.props.checked || false});
   }
 
-  componentWillReceiveProps(nextProps: IconToggleProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: IconToggleProps) {
     if (nextProps.checked !== this.props.checked) {
       this.setState({checked: nextProps.checked || false});
     }
